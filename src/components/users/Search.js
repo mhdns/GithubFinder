@@ -26,9 +26,12 @@ class Search extends Component {
                     value={this.state.text} placeholder='Search Users...' />
                     <input type='submit' value='Search' className='btn btn-dark btn-block' />
                 </form>
-                <button onClick={this.props.clearUsers} className='btn btn-light btn-block'>
+                {this.props.showClear &&
+                    <button onClick={this.props.clearUsers} className='btn btn-light btn-block'>
                     Clear
-                </button>
+                    </button>
+                }
+                
             </div>
         )
     }
